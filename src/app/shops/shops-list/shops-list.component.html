@@ -1,0 +1,8 @@
+<section id="shopListings">
+  <h1 class="title">Shop Listings</h1>
+  <div class="row">
+    <div class='col-md-6 col-xs-4' *ngFor="let shop of shops">
+      <turkey-shops-list-item [currentShop]="shop"></turkey-shops-list-item>
+    </div>
+  </div>
+</section>
