@@ -1,9 +1,10 @@
-<a routerLink="/shops/{{currentShop.id}}">
+<a routerLink="/shops/{{currentShop._id}}">
   <div class="shopList-card">
-    <img class="card-img-top" src="http://via.placeholder.com/350x250" alt="">
+    <img class="card-img-top" src="{{currentShop.image}}" alt="">
     <div class="card-block">
-      <h6 class="card-subtitle">{{currentShop.title}}</h6>
-      <h4 class="card-title">Located in {{currentShop.city}}</h4>
+      <h6 class="card-subtitle {{currentShop.category}}"> {{currentShop.category}} &#183; {{currentShop.city}}</h6>
+      <h4 class="card-subtitle">{{currentShop.title}}</h4>
+      <!--<h4 class="card-title">Located in {{currentShop.city}}</h4>-->
       <p class="card-text">Extablished in {{currentShop.established}}</p>
     </div>
   </div>

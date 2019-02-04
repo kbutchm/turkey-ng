@@ -1,7 +1,55 @@
-<div *ngIf="shops">
-  <p>{{shops.id}}</p>
-  <p>{{shops.title}}</p>
-  <p>{{shops.city}}</p>
-  <p>{{shops.street}}</p>
-  <p>{{shops.location}}</p>
-</div>
+<section id="shopDetails" *ngIf="shops">
+  <div class="upper-section">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{shops.image}}" alt="">
+      </div>
+      <div class="col-md-6">
+        <img src="{{shops.image}}" alt="">
+      </div>
+    </div>
+  </div> 
+ 
+
+  <div class="details-section">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="shop">
+          <h2 class="shop-type {{shops.category}}">{{shops.category}}</h2>
+          <h1 class="shop-title">{{shops.title}}</h1>
+          <h2 class="shop-city">Located in {{shops.city | ucwords}}</h2>
+          <div class="shop-info">
+            <span><i class="fa fa-building"></i> Established in {{shops.established}}</span>
+          </div>
+          <p class="shop-description">
+            {{shops.title | upper}}
+          </p>
+          <hr>
+          <div class="shop-assets">
+            <h3 class="title">Assets</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <span><i class="fa fa-asterisk"></i> Free Parking</span>
+                <p></p>
+                <span><i class="fa fa-thermometer"></i> Friendly Service</span>
+                <p></p>
+                <span><i class="fa fa-location-arrow"></i> Easy Access</span>
+              </div>
+              <div class="col-md-6">
+                <span><i class="fa fa-asterisk"></i> Free Parking</span>
+                <p></p>
+                <span><i class="fa fa-thermometer"></i> Friendly Service</span>
+                <p></p>
+                <span><i class="fa fa-location-arrow"></i> Easy Access</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"> BOOKING</div>
+    </div>
+  </div>
+  
+</section>
+
+

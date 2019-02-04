@@ -8,8 +8,9 @@ class FakeDB {
             city: "Ennis",
             street: "Abbey St",
             location: "Ennis",
+            category: "street store",
             established: "1960",
-            image: "http://via.placeholder.com/350x250",
+            image: "https://booksync-jerga-prod.s3.amazonaws.com/uploads/rental/image/5/image.jpeg",
             description: "Shop #1",
           },
           {
@@ -17,8 +18,9 @@ class FakeDB {
             city: "Barefield",
             street: "Tulla Road",
             location: "Roslevan",
+            category: "shopping complex store",
             established: "2004",
-            image: "http://via.placeholder.com/350x250",
+            image: "https://booksync-jerga-prod.s3.amazonaws.com/uploads/rental/image/5/image.jpeg",
             description: "Shop #2",
           }]
     }

@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { NgPipesModule } from 'ngx-pipes';
 
 import { ShopsComponent } from './shops.component';
 import { ShopsListComponent } from './shops-list/shops-list.component';
 import { ShopsListItemComponent } from './shops-list-item/shops-list-item.component';
 import { ShopsService } from './shared/shops.service';
 import { ShopsDetailComponent } from './shops-detail/shops-detail.component';
+
+import { UppercasePipe } from '../common/pipes/uppercase.pipe';
 
 // create routes
 const routes: Routes = [
@@ -23,11 +27,15 @@ const routes: Routes = [
         ShopsComponent,
         ShopsListComponent,
         ShopsListItemComponent,
-        ShopsDetailComponent
+        ShopsDetailComponent,
+        UppercasePipe
     ],
     imports: [
         CommonModule,
-        RouterModule.forChild(routes)],
+        RouterModule.forChild(routes),
+        HttpClientModule,
+        NgPipesModule
+    ],
     providers: [ShopsService]
 })
 export class ShopsModule { }
